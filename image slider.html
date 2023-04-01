@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>image slider</title>
+    <link rel="stylesheet" href="image slider.css">
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="images/person-holds-a-book-over-a-stack-and-turns-the-page.jpg" id="slideImg">
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="menu-icons">
+                    <img src="images/user1.png">
+                    <img src="images/cart.png">
+                    <img src="images/menuu.png">
+                </div>
+            </div>
+            <div class="content">
+                <h1>LETS START DESIGN</h1>
+                <h3>Subscribe Eeasy Tutorials YouTube channel to Watch more videos press the bell icon to get latest updates</h3>
+                <div>
+                    <button type="button">WATCH MORE</button>
+                    <button type="button" class="btn-2">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- js -->
+    <script>
+        var slideImg  = document.getElementById("slideImg");
+
+        var images = new Array (
+            "images/slider2.jpg",
+            "images/slider3.jpg",
+            "images/slider4.jpg",
+            "images/slider5.jpg",
+            "images/slider6.jpg"
+
+          );
+
+        var len = images.length;
+        var i = 0;
+            function slider (){
+                if (i > len-1){
+                    i = 0;
+                }
+                slideImg.src = images[i]
+                i++;
+                setTimeout('slider ()', 3000);
+            }
+    </script>
+    <!-- end js -->
+</body>
+</html>
